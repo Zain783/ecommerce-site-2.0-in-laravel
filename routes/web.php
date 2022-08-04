@@ -11,5 +11,7 @@ Route::get('/', function () {
 Route::get('/loginpanel', function () {
     return view('login');
 });
-
+Route::get('/products', function () {
+    return view('products');
+});
 Route::post("/login",[UserController::class,"login"]);

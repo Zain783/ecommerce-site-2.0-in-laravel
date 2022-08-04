@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\products;
 use Illuminate\Http\Request;
-
+use App\Models\Product;
 class ProductController extends Controller
 {
     public function index()
     {
-        return "welome to home page";
+       $data= Product::all();
+        return view('products',['products'=>$data]);
     }
 }
