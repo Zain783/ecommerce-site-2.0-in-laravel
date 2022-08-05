@@ -17,10 +17,10 @@ class UserAuth
     public function handle(Request $request, Closure $next)
     { //here i compare incoming request path if it is equal to login and request session has user data its mean we are already exists or user already exists
        // so we redirect to home page
-        if($request->path()=="loginpanel" && $request->session()->has('user')){
+    //    if($request->path()=="loginpanel" && $request->session()->has('user')){
 
-            return redirect('/');
-        }
+    //     return redirect('/');
+    // }
         return $next($request);
     }
 }
